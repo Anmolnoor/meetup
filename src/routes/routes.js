@@ -2,8 +2,7 @@ import {
 	BrowserRouter as Router,
 	Routes,
 	Route,
-	Outlet,
-	Navigate
+	Outlet
 } from "react-router-dom";
 
 //  ---  pages  ---
