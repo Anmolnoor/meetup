@@ -1,6 +1,8 @@
 import "./App.css";
-import myRouter from "./routes/routes";
+import MyRouter from "./routes/routes";
 
-const App = () => <myRouter />;
+const App = () => {
+	return <MyRouter />;
+};
 
 export default App;

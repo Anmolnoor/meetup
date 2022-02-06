@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import App from "./App";
-import MyRouter from "./routes/routes";
+import App from "./App";
+import { FavoriteContextProvider } from "./store/favorites-context";
+// import MyRouter from "./routes/routes";
 
-ReactDOM.render(<MyRouter />, document.getElementById("root"));
+ReactDOM.render(
+	<FavoriteContextProvider>
+		<App />
+	</FavoriteContextProvider>,
+	document.getElementById("root")
+);
