@@ -10,9 +10,9 @@ import {
 import Home from "../pages/Home";
 import Favroite from "../pages/Favroite";
 import New from "../pages/New";
+import Layout from "../components/layout/Layout";
 
-//   ---  navigation  ---
-import Navigation from "../components/layout/MainNavigation";
+//   ---  layout  ---
 
 const MyRouter = () => {
 	const Error = () => {
@@ -27,15 +27,16 @@ const MyRouter = () => {
 
 	return (
 		<Router>
-			<Navigation />
-			<Routes>
-				<Route path='/' element={<Outlet />} exact>
-					<Route path='' element={<Home />} exact />
-					<Route path='favorites' element={<Favroite />} />
-					<Route path='new-meetups' element={<New />} />
-				</Route>
-				<Route path='*' element={<Error />} />
-			</Routes>
+			<Layout>
+				<Routes>
+					<Route path='/' element={<Outlet />} exact>
+						<Route path='' element={<Home />} exact />
+						<Route path='favorites' element={<Favroite />} />
+						<Route path='new-meetups' element={<New />} />
+					</Route>
+					<Route path='*' element={<Error />} />
+				</Routes>
+			</Layout>
 		</Router>
 	);
 };
